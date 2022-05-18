@@ -1,0 +1,20 @@
+<%- include("../views/partials/header.ejs");%>
+<!-- date,name,from,amount,tags -->
+
+<div class="container">
+  <h1>Add an Expense</h1>
+  <form action="/budgtr" method="POST">
+      Date: <input type="text" name="date" placeholder="Date"><br>
+      Name: <input type="text" name="name" placeholder="Name"><br>
+      From: <input type="text" name="from" p
+      laceholder="From"><br>
+      Amount: <input type="number" name="amount" placeholder="Amount"><br>
+      tags: <input type="text" name="tags" placeholder="Tags"><br>
+      <input type="submit" value="Create Expense">
+    </form>
+  </form>
+  <a href="/budgtr" class="button button-primary">Back</a>
+</div>
+
+
+<%- include("../views/partials/footer.ejs");%>
