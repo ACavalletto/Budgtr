@@ -23,7 +23,7 @@ app.get("/budgtr/new", (req, res) => {
 
 app.post("/budgtr", (req, res) => {
     expenses.push(req.body)
-    balance += req.body.amount;
+    balance += parseInt(req.body.amount);
     res.redirect("/budgtr")
 })
 
