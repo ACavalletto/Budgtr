@@ -1,15 +1,16 @@
 <%- include("../views/partials/header.ejs");%>
 <!-- date,name,from,amount,tags Var=== expenses-->
+
 <%if(balance < 0){%>
 <style>
   body {
-    background-color: red;
+    background-color: rgb(180, 48, 48);
   }
 </style>
 <%}%> <%if(balance > 1000){%>
 <style>
   body {
-    background-color: green;
+    background-color: rgb(53, 152, 206);
   }
 </style>
 <%}%>
@@ -19,7 +20,7 @@
   </nav>
   <h1>Budgtr</h1>
   <h5>Account Balance: <%=balance%></h5>
-</div>
+
 <table class="u-full-width">
   <% for(let i = 0; i < expenses.length; i++) {%> <%const
   {date,name,from,amount,tags}= expenses[i]%>
@@ -31,5 +32,6 @@
   </tr>
   <%}%>
 </table>
+</div>
 
 <%- include("../views/partials/footer.ejs");%>
